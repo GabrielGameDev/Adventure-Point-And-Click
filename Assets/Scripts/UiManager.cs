@@ -28,19 +28,7 @@ public class UiManager : MonoBehaviour
 		}
 	}
 
-	private void OnEnable()
-	{
-		PlayerMovement.onCursorOnGround += () => SetCursor(ObjectType.ground);
-		PlayerMovement.onCursorExitGround += () => SetCursor(ObjectType.none);
-	}
-
 	
-
-	private void OnDisable()
-	{
-		PlayerMovement.onCursorOnGround -= () => SetCursor(ObjectType.ground);
-		PlayerMovement.onCursorExitGround += () => SetCursor(ObjectType.none);
-	}
 	public void SetCursor(ObjectType objectType)
     {
 		if (instance == null)

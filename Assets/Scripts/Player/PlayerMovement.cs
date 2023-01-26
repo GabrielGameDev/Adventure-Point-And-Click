@@ -6,9 +6,6 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
 
-	public delegate void MoveAction();
-	public static event MoveAction onCursorOnGround, onCursorExitGround;
-
 	public LayerMask groundLayer;
     NavMeshAgent agent;
 	Animator animator;
@@ -45,27 +42,16 @@ public class PlayerMovement : MonoBehaviour
 			 * */
 			if (((1 << hit.collider.gameObject.layer) & groundLayer) != 0)
 			{
-				//cursor no chão
-				if (onCursorOnGround != null)
-					onCursorOnGround();
+				
 
 				if (Input.GetButtonDown("Fire1"))
 					agent.SetDestination(hit.point);
 
 			}
-			else
-			{
-				//cursor em outro lugar
-				if (onCursorExitGround != null)
-					onCursorExitGround();
-			}
+			
 
 		}
-		else
-		{
-			if (onCursorExitGround != null)
-				onCursorExitGround();
-		}
+		
 
 		animator.SetBool("run", agent.velocity.magnitude > 0.1f);
         
