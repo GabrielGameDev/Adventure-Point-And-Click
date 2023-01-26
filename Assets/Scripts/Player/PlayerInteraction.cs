@@ -23,21 +23,21 @@ public class PlayerInteraction : MonoBehaviour
             hit.collider.TryGetComponent<Interactable>(out interactable);
             if(interactable != null)
             {
-                UiManager.instance.SetCursor(interactable.objectType);
+                UiManager.SetCursor(interactable.objectType);
             }
 			else if (((1 << hit.collider.gameObject.layer) & playerMovement.groundLayer) != 0)
 			{
-				UiManager.instance.SetCursor(ObjectType.ground);
+				UiManager.SetCursor(ObjectType.ground);
 			}
 			else
 			{
-				UiManager.instance.SetCursor(ObjectType.none);
+				UiManager.SetCursor(ObjectType.none);
 			}
 
 		}
 		else
 		{
-			UiManager.instance.SetCursor(ObjectType.none);
+			UiManager.SetCursor(ObjectType.none);
 		}
 
 	}

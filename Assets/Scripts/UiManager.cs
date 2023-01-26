@@ -29,12 +29,12 @@ public class UiManager : MonoBehaviour
 	}
 
 	
-	public void SetCursor(ObjectType objectType)
+	public static void SetCursor(ObjectType objectType)
     {
 		if (instance == null)
 			return;
 		
-		Cursor.SetCursor(cursors[(int)objectType], Vector2.zero, CursorMode.Auto);
+		Cursor.SetCursor(instance.cursors[(int)objectType], Vector2.zero, CursorMode.Auto);
 		
 	}
 
