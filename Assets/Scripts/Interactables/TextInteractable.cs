@@ -8,6 +8,9 @@ public class TextInteractable : Interactable
 
 	public override void Interact()
 	{
-		Debug.Log(text);
+		if (isInteracting)
+			return;
+		isInteracting = true;
+		UiManager.SetText(this);
 	}
 }

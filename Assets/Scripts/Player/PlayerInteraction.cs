@@ -20,11 +20,16 @@ public class PlayerInteraction : MonoBehaviour
 		if (Physics.Raycast(ray, out hit))
         {
             Interactable interactable;
-            hit.collider.TryGetComponent<Interactable>(out interactable);
+            hit.collider.TryGetComponent(out interactable);
             if(interactable != null)
             {
                 UiManager.SetCursor(interactable.objectType);
-            }
+				if (Input.GetButtonDown("Fire1"))
+				{
+					interactable.Interact();
+				}
+			}
+		
 			else if (((1 << hit.collider.gameObject.layer) & playerMovement.groundLayer) != 0)
 			{
 				UiManager.SetCursor(ObjectType.ground);

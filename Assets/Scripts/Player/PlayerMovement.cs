@@ -45,7 +45,11 @@ public class PlayerMovement : MonoBehaviour
 				
 
 				if (Input.GetButtonDown("Fire1"))
+				{
 					agent.SetDestination(hit.point);
+					UiManager.DisableInteraction();
+				}
+					
 
 			}
 			
