@@ -12,9 +12,16 @@ public enum ObjectType
 
 public class UiManager : MonoBehaviour
 {
-    
 
-    public Texture2D[] cursors;
+	[Tooltip("The order of the cursors must be the same as the ObjectType enum\n" +
+		"0. ground\n" +
+		"1. door\n" +
+		"2. text\n" +
+		"3. dialogue\n" +
+		"4. collectable\n" +
+		"5. none\n")]
+
+	public Texture2D[] cursors;
 	public GameObject interactionPanel;
 	public TMP_Text interactionText;
 	public Image portrait;
