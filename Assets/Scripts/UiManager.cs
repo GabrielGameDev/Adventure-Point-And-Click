@@ -22,10 +22,15 @@ public class UiManager : MonoBehaviour
 		"5. none\n")]
 
 	public Texture2D[] cursors;
+
+	[Tooltip("Interactions")]
 	public GameObject interactionPanel;
 	public TMP_Text interactionText;
 	public Image portrait;
 	public TMP_Text[] answersTexts;
+
+	[Tooltip("Inventory")]
+	public Image[] inventoryImages;
 
     public static UiManager instance;
 
@@ -71,6 +76,22 @@ public class UiManager : MonoBehaviour
 		instance.interactionPanel.SetActive(false);
 		if (instance.textInteractable != null)
 			instance.textInteractable.isInteracting = false;
+	}
+
+	public static void SetInventoryImage(Item item)
+	{
+		if (instance == null)
+			return;
+
+		for (int i = 0; i < instance.inventoryImages.Length; i++)
+		{
+			if (!instance.inventoryImages[i].gameObject.activeInHierarchy)
+			{
+				instance.inventoryImages[i].sprite = item.itemImage;
+				instance.inventoryImages[i].gameObject.SetActive(true);
+				break;
+			}
+		}
 	}
 
 }
