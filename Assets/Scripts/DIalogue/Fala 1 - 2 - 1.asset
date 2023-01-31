@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3307e4b2abb34454e870fe769483fac5, type: 3}
-  m_Name: Fala1
+  m_Name: Fala 1 - 2 - 1
   m_EditorClassIdentifier: 
-  dialogueName: Fala 1
-  playerAnswer: "Voltar pro in\xEDcio"
-  dialogueText: "Preciso que voc\xEA expulse aquele bicho bizarro"
+  dialogueName: Fala 1 -1
+  playerAnswer: Me fale sobre os animais
+  dialogueText: "S\xE3o animais u\xE9"
   portrait: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
   isEnd: 0
   answers:
-  - {fileID: 11400000, guid: f2a0767aac509e34babf7914d35f0df9, type: 2}
   - {fileID: 11400000, guid: 9df6f91ed5a31844b9a49ef11d8e28df, type: 2}
-  - {fileID: 11400000, guid: 6c4621fc8c17522448e325e2fd8ab7d8, type: 2}
+  - {fileID: 11400000, guid: 60b728d9038e6724395cd9840cdd0ca4, type: 2}

@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3307e4b2abb34454e870fe769483fac5, type: 3}
   m_Name: Fala 1 - 2
   m_EditorClassIdentifier: 
-  dialogueName: Fala 1 -2
-  dialogueText: 
-  playerAnswer: Tchau
+  dialogueName: Fala 1 -1
+  playerAnswer: Me fale mais sobre esse lugar
+  dialogueText: "Aqui \xE9 uma fazenda. Com bichos e comidas. \xC9 isso"
   portrait: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
-  isEnd: 1
-  answers: []
+  isEnd: 0
+  answers:
+  - {fileID: 11400000, guid: 3e2a81553ab3fd941a5ba51a770b6aa6, type: 2}
+  - {fileID: 11400000, guid: 5aec90cfddd084f4fadcf7125c3d64e4, type: 2}
+  - {fileID: 11400000, guid: 60b728d9038e6724395cd9840cdd0ca4, type: 2}

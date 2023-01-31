@@ -6,8 +6,8 @@ using UnityEngine;
 public class Dialogue : ScriptableObject
 {
 	public string dialogueName;
-	public string dialogueText;
 	public string playerAnswer;
+	public string dialogueText;	
 	public Sprite portrait;
 	public bool isEnd;
 	public Dialogue[] answers;
