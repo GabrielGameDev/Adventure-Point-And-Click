@@ -122,6 +122,12 @@ public class UiManager : MonoBehaviour
 		if (instance == null)
 			return;
 
+		if(dialogue.isEnd)
+		{
+			FinishDialogue();
+			return;
+		}
+
 		instance.inDialogue = true;
 		SetCursor(ObjectType.none);
 		DisableInteraction();
@@ -149,6 +155,10 @@ public class UiManager : MonoBehaviour
 			return;
 		
 		instance.inDialogue = false;
+		for (int i = 0; i < instance.answersTexts.Length; i++)
+		{
+			instance.answersTexts[i].gameObject.SetActive(false);
+		}
 		DisableInteraction();
 	}
 
