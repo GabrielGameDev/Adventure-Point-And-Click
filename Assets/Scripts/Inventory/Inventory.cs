@@ -32,4 +32,12 @@ public class Inventory : MonoBehaviour
 		UiManager.SetInventoryImage(item);
 	}
 
+	public static bool HasItem(Item item)
+	{
+		if (instance == null)
+			return false;
+
+		return instance.items.Contains(item);
+	}
+
 }

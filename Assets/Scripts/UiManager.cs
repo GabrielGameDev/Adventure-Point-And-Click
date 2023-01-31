@@ -63,7 +63,26 @@ public class UiManager : MonoBehaviour
 		if (instance == null)
 			return;
 
-		instance.interactionText.text = interactable.text;
+		if (interactable.conditionalItem != null)
+		{
+			Debug.Log("Tem conditional item");
+			if (Inventory.HasItem(interactable.conditionalItem))
+			{
+				Debug.Log("Tem item");
+				instance.interactionText.text = interactable.conditionalText;
+			}
+			else
+			{
+				Debug.Log("Não tem item");
+				instance.interactionText.text = interactable.text;
+			}
+		}
+		else
+		{
+			Debug.Log("Não tem conditional item");
+			instance.interactionText.text = interactable.text;
+		}
+		
 		instance.interactionPanel.SetActive(true);
 		instance.textInteractable = interactable;
 	}
@@ -83,6 +102,7 @@ public class UiManager : MonoBehaviour
 		if (instance == null)
 			return;
 
+		DisableInteraction();
 		for (int i = 0; i < instance.inventoryImages.Length; i++)
 		{
 			if (!instance.inventoryImages[i].gameObject.activeInHierarchy)

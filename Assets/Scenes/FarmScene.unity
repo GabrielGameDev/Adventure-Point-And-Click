@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -218,6 +218,8 @@ MonoBehaviour:
   objectType: 2
   isInteracting: 0
   text: "N\xE3o parece haver ningu\xE9m l\xE1 dentro"
+  conditionalText: "Olha s\xF3 como fico bonito de camiseta"
+  conditionalItem: {fileID: 11400000, guid: 451692779d9e357458196789bd48e0d9, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +842,86 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97778734, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 97778734, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 97778734, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 97778734, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167405785, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167405785, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167405785, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167405785, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 201470044, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 201470044, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 201470044, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 201470044, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573450947, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573450947, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573450947, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573450947, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817362491, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817362491, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817362491, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817362491, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4962136846980274651, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
       propertyPath: m_RootOrder
       value: 7
