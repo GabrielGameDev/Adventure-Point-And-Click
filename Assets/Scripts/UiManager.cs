@@ -34,7 +34,10 @@ public class UiManager : MonoBehaviour
 
     public static UiManager instance;
 
+	public bool inDialogue = false;
+
 	TextInteractable textInteractable;
+	
 
 	private void Awake()
 	{
@@ -112,6 +115,40 @@ public class UiManager : MonoBehaviour
 				break;
 			}
 		}
+	}
+
+	public static void SetDialogue(Dialogue dialogue)
+	{
+		if (instance == null)
+			return;
+
+		instance.inDialogue = true;
+		SetCursor(ObjectType.none);
+		DisableInteraction();
+		instance.portrait.sprite = dialogue.portrait;
+		instance.interactionText.text = dialogue.dialogueText;
+		for (int i = 0; i < instance.answersTexts.Length; i++)
+		{
+			if (i < dialogue.answers.Length)
+			{
+				instance.answersTexts[i].text = dialogue.answers[i].playerAnswer;
+				instance.answersTexts[i].gameObject.SetActive(true);
+			}
+			else
+			{
+				instance.answersTexts[i].gameObject.SetActive(false);
+			}
+		}
+		instance.interactionPanel.SetActive(true);
+	}
+
+	public static void FinishDialogue()
+	{
+		if (instance == null)
+			return;
+		
+		instance.inDialogue = false;
+		DisableInteraction();
 	}
 
 }
