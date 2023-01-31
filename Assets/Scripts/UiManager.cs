@@ -132,6 +132,7 @@ public class UiManager : MonoBehaviour
 			if (i < dialogue.answers.Length)
 			{
 				instance.answersTexts[i].text = dialogue.answers[i].playerAnswer;
+				instance.answersTexts[i].GetComponent<AnswerTextButton>().dialogue = dialogue.answers[i];
 				instance.answersTexts[i].gameObject.SetActive(true);
 			}
 			else
