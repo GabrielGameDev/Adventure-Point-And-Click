@@ -10,6 +10,18 @@ public class SceneInteraction : Interactable
 
 	public override void Interact()
 	{
+		if (conditionalItem)
+		{
+			if (Inventory.HasItem(conditionalItem))
+			{
+				SceneManager.LoadScene(sceneName);
+			}
+			else
+			{
+				Debug.Log("Precisa do item " + conditionalItem.itemName);
+			}
+			return;
+		}
 		SceneManager.LoadScene(sceneName);
 	}
 

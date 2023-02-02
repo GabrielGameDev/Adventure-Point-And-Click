@@ -873,7 +873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectType: 1
   isInteracting: 0
-  conditionalItem: {fileID: 0}
+  conditionalItem: {fileID: 11400000, guid: 451692779d9e357458196789bd48e0d9, type: 2}
   sceneName: Home
 --- !u!65 &1437904036
 BoxCollider:

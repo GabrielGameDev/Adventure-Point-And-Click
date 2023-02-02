@@ -10,6 +10,7 @@ public class Dialogue : ScriptableObject
 	public string dialogueText;	
 	public Sprite portrait;
 	public bool isEnd;
+	public Item conditionalItem;
 	public Dialogue[] answers;
 
 }

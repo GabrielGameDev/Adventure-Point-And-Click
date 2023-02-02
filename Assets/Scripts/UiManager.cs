@@ -133,10 +133,23 @@ public class UiManager : MonoBehaviour
 		DisableInteraction();
 		instance.portrait.sprite = dialogue.portrait;
 		instance.interactionText.text = dialogue.dialogueText;
+
+		for (int i = 0; i < instance.answersTexts.Length; i++)
+		{
+			instance.answersTexts[i].gameObject.SetActive(false);
+		}
+
 		for (int i = 0; i < instance.answersTexts.Length; i++)
 		{
 			if (i < dialogue.answers.Length)
 			{
+				if (dialogue.answers[i].conditionalItem)
+				{
+					if (!Inventory.HasItem(dialogue.answers[i].conditionalItem))
+					{
+						continue;
+					}
+				}
 				instance.answersTexts[i].text = dialogue.answers[i].playerAnswer;
 				instance.answersTexts[i].GetComponent<AnswerTextButton>().dialogue = dialogue.answers[i];
 				instance.answersTexts[i].gameObject.SetActive(true);
