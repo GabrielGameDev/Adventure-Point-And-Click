@@ -6,7 +6,7 @@ public class TextInteractable : Interactable
 {
 	public string text;
 	public string conditionalText;
-	public Item conditionalItem;
+	
 
 	public override void Interact()
 	{
