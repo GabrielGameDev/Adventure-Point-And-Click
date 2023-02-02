@@ -1595,7 +1595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4962136846980274651}
   - component: {fileID: 1698295304233529263}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Ui Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
