@@ -7,19 +7,22 @@ public class PlayerMovement : MonoBehaviour
 {
 
 	public LayerMask groundLayer;
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
 	Animator animator;
+	PlayerInteraction playerInteraction;
     
     // Start is called before the first frame update
     void Start()
     {
 		agent = GetComponent<NavMeshAgent>();
 		animator = GetComponent<Animator>();
+		playerInteraction = GetComponent<PlayerInteraction>();
 	}
 
     // Update is called once per frame
     void Update()
     {
+		animator.SetBool("run", agent.velocity.magnitude > 0.1f);
 		if (UiManager.instance.inDialogue)
 		{
 			return;
@@ -53,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
 				{
 					agent.SetDestination(hit.point);
 					UiManager.DisableInteraction();
+					playerInteraction.CancelInteraction();
 				}
 					
 
@@ -62,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 		
 
-		animator.SetBool("run", agent.velocity.magnitude > 0.1f);
+		
         
 	}
 }
