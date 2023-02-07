@@ -15,6 +15,8 @@ public class PlayerInteraction : MonoBehaviour
 
 	bool cursorChanged;
 
+	Interactable interactable;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,14 +37,17 @@ public class PlayerInteraction : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit))
         {
-					
-			
-            Interactable interactable;
-            hit.collider.TryGetComponent(out interactable);
-            if(interactable != null)
+			Interactable newInteractable;
+            hit.collider.TryGetComponent(out newInteractable);
+            if(newInteractable != null)
 			{
+				if (interactable != null && interactable != newInteractable)
+				{
+					interactable.outline.enabled = false;
+				}
+				interactable = newInteractable;
 				ChangeCursor();
-
+				interactable.outline.enabled = true;
 				UiManager.SetCursor(interactable.objectType);
 				if (Input.GetButtonDown("Fire1"))
 				{
@@ -56,23 +61,30 @@ public class PlayerInteraction : MonoBehaviour
 
 			else if (((1 << hit.collider.gameObject.layer) & playerMovement.groundLayer) != 0)
 			{
-				cursorChanged = false;
-				UiManager.SetCursor(ObjectType.ground);
-				
+				DisableInteraction(ObjectType.ground);
 			}
 			else
 			{
-				cursorChanged = false;
-				UiManager.SetCursor(ObjectType.none);
+				DisableInteraction(ObjectType.none);
 			}
 
 		}
 		else
 		{
-			cursorChanged = false;
-			UiManager.SetCursor(ObjectType.none);
+			DisableInteraction(ObjectType.none);
 		}
 
+	}
+
+	private void DisableInteraction(ObjectType objectType)
+	{
+		cursorChanged = false;
+		UiManager.SetCursor(objectType);
+		if (interactable != null)
+		{
+			interactable.outline.enabled = false;
+			interactable = null;
+		}
 	}
 
 	private void ChangeCursor()
@@ -85,6 +97,8 @@ public class PlayerInteraction : MonoBehaviour
 			cursorChanged = true;
 		}
 	}
+
+	
 
 	IEnumerator Interact(Interactable interactable)
 	{
