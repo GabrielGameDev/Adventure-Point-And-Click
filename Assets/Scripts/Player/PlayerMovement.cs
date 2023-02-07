@@ -27,7 +27,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		animator.SetBool("run", agent.velocity.magnitude > 0.1f);
+		bool run = agent.velocity.magnitude > 0.1f;
+		animator.SetBool("run", run);
+		if (agent.remainingDistance < 0.1f && playerInteraction.selection.activeInHierarchy && !playerInteraction.walking)
+		{
+			Debug.Log("Não estou correndo e o bagulho tá desativado");
+			playerInteraction.selection.SetActive(false);
+		}
 		if (UiManager.instance.inDialogue)
 		{
 			return;
@@ -61,7 +67,8 @@ public class PlayerMovement : MonoBehaviour
 				{
 					if (SoundManager.instance != null)
 						SoundManager.PlaySound(SoundManager.instance.groundClick);
-					
+
+					playerInteraction.SetSelection(hit.point);
 					agent.SetDestination(hit.point);
 					UiManager.DisableInteraction();
 					playerInteraction.CancelInteraction();

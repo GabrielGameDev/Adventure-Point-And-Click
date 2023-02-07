@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+
+	public GameObject selection;
+
+	public bool walking;
+
     PlayerMovement playerMovement;
 
 	IEnumerator interactRoutine;
@@ -45,6 +50,7 @@ public class PlayerInteraction : MonoBehaviour
 					StartCoroutine(interactRoutine);
 					if (SoundManager.instance != null)
 						SoundManager.PlaySound(SoundManager.instance.groundClick);
+					
 				}
 			}
 
@@ -82,12 +88,13 @@ public class PlayerInteraction : MonoBehaviour
 
 	IEnumerator Interact(Interactable interactable)
 	{
-		bool walking = true;
+		SetSelection(interactable.transform.position);
+		walking = true;
 		playerMovement.agent.SetDestination(interactable.transform.position);
 		yield return new WaitForSeconds(0.1f);
 		while (walking)
 		{
-			if(playerMovement.agent.remainingDistance > 2)
+			if (playerMovement.agent.remainingDistance > 2)
 			{
 				yield return null;
 			}
@@ -95,11 +102,18 @@ public class PlayerInteraction : MonoBehaviour
 			{
 				walking = false;
 				playerMovement.agent.SetDestination(transform.position);
+				selection.SetActive(false);
 			}
 		}
 
 		interactable.Interact();
-		
+
+	}
+
+	public void SetSelection(Vector3 position)
+	{
+		selection.transform.position = position + new Vector3(0,0.25f,0);
+		selection.SetActive(true);
 	}
 
 	public void CancelInteraction()
