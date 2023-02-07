@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: 52e3bd8da0e4045459cf45216d58439c
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/FarmScene.unity
+    guid: c5195ceb9210ff34eb6993eb8c1921a8
   m_configObjects: {}

@@ -36,6 +36,8 @@ public class UiManager : MonoBehaviour
 
 	public bool inDialogue = false;
 
+	public TMP_Text infoText;
+
 	TextInteractable textInteractable;
 	
 
@@ -106,6 +108,10 @@ public class UiManager : MonoBehaviour
 			return;
 
 		DisableInteraction();
+		SetInfoText(item.description);
+		if (SoundManager.instance != null)
+			SoundManager.PlaySound(SoundManager.instance.itemCollect);
+
 		for (int i = 0; i < instance.inventoryImages.Length; i++)
 		{
 			if (!instance.inventoryImages[i].gameObject.activeInHierarchy)
@@ -127,6 +133,9 @@ public class UiManager : MonoBehaviour
 			FinishDialogue();
 			return;
 		}
+
+		if (SoundManager.instance != null)
+			SoundManager.PlaySound(SoundManager.instance.introDialogue);
 
 		instance.inDialogue = true;
 		SetCursor(ObjectType.none);
@@ -151,7 +160,7 @@ public class UiManager : MonoBehaviour
 					}
 				}
 				instance.answersTexts[i].text = dialogue.answers[i].playerAnswer;
-				instance.answersTexts[i].GetComponent<AnswerTextButton>().dialogue = dialogue.answers[i];
+				instance.answersTexts[i].GetComponent<AnswerTextButton>().SetButton(dialogue.answers[i]);
 				instance.answersTexts[i].gameObject.SetActive(true);
 			}
 			else
@@ -166,13 +175,32 @@ public class UiManager : MonoBehaviour
 	{
 		if (instance == null)
 			return;
-		
+
+		if (SoundManager.instance != null)
+			SoundManager.PlaySound(SoundManager.instance.finishDialogue);
 		instance.inDialogue = false;
 		for (int i = 0; i < instance.answersTexts.Length; i++)
 		{
 			instance.answersTexts[i].gameObject.SetActive(false);
 		}
 		DisableInteraction();
+	}
+
+	public static void SetInfoText(string text)
+	{
+		if (instance == null)
+			return;
+
+		instance.infoText.text = text;
+		instance.infoText.gameObject.SetActive(true);
+
+		instance.Invoke("DisableInfoText", 4f);
+	}
+
+	void DisableInfoText()
+	{	
+
+		instance.infoText.gameObject.SetActive(false);
 	}
 
 }

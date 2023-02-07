@@ -54,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
 
 				if (Input.GetButtonDown("Fire1"))
 				{
+					if (SoundManager.instance != null)
+						SoundManager.PlaySound(SoundManager.instance.groundClick);
+					
 					agent.SetDestination(hit.point);
 					UiManager.DisableInteraction();
 					playerInteraction.CancelInteraction();

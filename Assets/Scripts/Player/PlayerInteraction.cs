@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
 
 	IEnumerator interactRoutine;
 
+	bool cursorChanged;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,33 +30,54 @@ public class PlayerInteraction : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit))
         {
+					
+			
             Interactable interactable;
             hit.collider.TryGetComponent(out interactable);
             if(interactable != null)
 			{
+				ChangeCursor();
+
 				UiManager.SetCursor(interactable.objectType);
 				if (Input.GetButtonDown("Fire1"))
 				{
 					interactRoutine = Interact(interactable);
 					StartCoroutine(interactRoutine);
+					if (SoundManager.instance != null)
+						SoundManager.PlaySound(SoundManager.instance.groundClick);
 				}
 			}
 
 			else if (((1 << hit.collider.gameObject.layer) & playerMovement.groundLayer) != 0)
 			{
+				cursorChanged = false;
 				UiManager.SetCursor(ObjectType.ground);
+				
 			}
 			else
 			{
+				cursorChanged = false;
 				UiManager.SetCursor(ObjectType.none);
 			}
 
 		}
 		else
 		{
+			cursorChanged = false;
 			UiManager.SetCursor(ObjectType.none);
 		}
 
+	}
+
+	private void ChangeCursor()
+	{
+		if (!cursorChanged)
+		{
+			if (SoundManager.instance != null)
+				SoundManager.PlaySound(SoundManager.instance.cursorChange);
+
+			cursorChanged = true;
+		}
 	}
 
 	IEnumerator Interact(Interactable interactable)
