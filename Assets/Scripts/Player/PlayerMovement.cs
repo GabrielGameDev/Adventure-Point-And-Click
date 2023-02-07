@@ -8,8 +8,12 @@ public class PlayerMovement : MonoBehaviour
 
 	public LayerMask groundLayer;
     public NavMeshAgent agent;
+	public AudioClip[] steps;
+
 	Animator animator;
 	PlayerInteraction playerInteraction;
+	AudioSource audioSource;
+	
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 		agent = GetComponent<NavMeshAgent>();
 		animator = GetComponent<Animator>();
 		playerInteraction = GetComponent<PlayerInteraction>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame
@@ -71,5 +76,10 @@ public class PlayerMovement : MonoBehaviour
 
 		
         
+	}
+
+	public void Step()
+	{
+		audioSource.PlayOneShot(steps[Random.Range(0, steps.Length)]);
 	}
 }

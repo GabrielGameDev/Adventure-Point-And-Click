@@ -6,7 +6,7 @@ public class TextInteractable : Interactable
 {
 	public string text;
 	public string conditionalText;
-	
+	public AudioClip audioClip;
 
 	public override void Interact()
 	{
@@ -14,5 +14,6 @@ public class TextInteractable : Interactable
 			return;
 		isInteracting = true;
 		UiManager.SetText(this);
+
 	}
 }

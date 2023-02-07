@@ -87,6 +87,8 @@ public class UiManager : MonoBehaviour
 			Debug.Log("Não tem conditional item");
 			instance.interactionText.text = interactable.text;
 		}
+		if(interactable.audioClip != null)
+			SoundManager.PlaySound(interactable.audioClip);
 		
 		instance.interactionPanel.SetActive(true);
 		instance.textInteractable = interactable;
