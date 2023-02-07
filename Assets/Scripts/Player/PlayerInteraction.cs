@@ -81,6 +81,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	public void CancelInteraction()
 	{
-		StopCoroutine(interactRoutine);
+		if (interactRoutine != null)
+			StopCoroutine(interactRoutine);
 	}
 }
