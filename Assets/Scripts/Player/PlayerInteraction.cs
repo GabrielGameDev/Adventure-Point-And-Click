@@ -116,7 +116,8 @@ public class PlayerInteraction : MonoBehaviour
 			{
 				walking = false;
 				playerMovement.agent.SetDestination(transform.position);
-				selection.SetActive(false);
+				if(selection != null)
+					selection.SetActive(false);
 			}
 		}
 
@@ -126,6 +127,9 @@ public class PlayerInteraction : MonoBehaviour
 
 	public void SetSelection(Vector3 position)
 	{
+		if (selection == null)
+			return;
+		
 		selection.transform.position = position + new Vector3(0,0.25f,0);
 		selection.SetActive(true);
 	}

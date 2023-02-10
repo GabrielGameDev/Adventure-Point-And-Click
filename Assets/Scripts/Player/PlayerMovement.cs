@@ -29,10 +29,13 @@ public class PlayerMovement : MonoBehaviour
     {
 		bool run = agent.velocity.magnitude > 0.1f;
 		animator.SetBool("run", run);
-		if (agent.remainingDistance < 0.1f && playerInteraction.selection.activeInHierarchy && !playerInteraction.walking)
+		if (playerInteraction.selection != null)
 		{
-			Debug.Log("Não estou correndo e o bagulho tá desativado");
-			playerInteraction.selection.SetActive(false);
+			if (agent.remainingDistance < 0.1f && playerInteraction.selection.activeInHierarchy && !playerInteraction.walking)
+			{
+				Debug.Log("Não estou correndo e o bagulho tá desativado");
+				playerInteraction.selection.SetActive(false);
+			}
 		}
 		if (UiManager.instance.inDialogue)
 		{

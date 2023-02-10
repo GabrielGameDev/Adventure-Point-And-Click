@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Fala 1 -1
   playerAnswer: Me fale sobre os animais
-  dialogueText: "S\xE3o animais u\xE9"
+  dialogueText: "S\xE3o animais de fazenda"
   portrait: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
   isEnd: 0
+  conditionalItem: {fileID: 0}
   answers:
   - {fileID: 11400000, guid: 9df6f91ed5a31844b9a49ef11d8e28df, type: 2}
   - {fileID: 11400000, guid: 60b728d9038e6724395cd9840cdd0ca4, type: 2}
