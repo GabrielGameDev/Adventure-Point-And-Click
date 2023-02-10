@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueName: Fala 1 -2
   playerAnswer: Peguei isso daqui
   dialogueText: "Legal. Mas isso n\xE3o serve pra nada"
-  portrait: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  portrait: {fileID: 21300000, guid: 52009c024c2a4ee4fbf78082930c96e4, type: 3}
   isEnd: 0
   conditionalItem: {fileID: 11400000, guid: edcbaa02c6b31cc44ac419f499a3ce87, type: 2}
   answers:

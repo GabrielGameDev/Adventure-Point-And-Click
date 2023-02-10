@@ -23,6 +23,8 @@ public class UiManager : MonoBehaviour
 
 	public Texture2D[] cursors;
 
+	public Sprite playerPortrait;
+
 	[Tooltip("Interactions")]
 	public GameObject interactionPanel;
 	public TMP_Text interactionText;
@@ -67,6 +69,8 @@ public class UiManager : MonoBehaviour
 	{
 		if (instance == null)
 			return;
+
+		instance.portrait.sprite = instance.playerPortrait;
 
 		if (interactable.conditionalItem != null)
 		{
@@ -192,6 +196,7 @@ public class UiManager : MonoBehaviour
 	{
 		if (instance == null)
 			return;
+
 
 		instance.infoText.text = text;
 		instance.infoText.gameObject.SetActive(true);

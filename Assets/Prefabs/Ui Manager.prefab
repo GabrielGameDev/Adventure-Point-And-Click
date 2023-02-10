@@ -1774,6 +1774,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 96d4bfdb0d6d8c042bf8fccf6524d239, type: 3}
   - {fileID: 2800000, guid: cecad95c851b97f40b105b30b0bfede3, type: 3}
   - {fileID: 2800000, guid: 2e71a8202d3b4a3448ec85ced5a40265, type: 3}
+  playerPortrait: {fileID: 21300000, guid: 34a49892a88fc92478707b5d9c6422d3, type: 3}
   interactionPanel: {fileID: 1487977317050005487}
   interactionText: {fileID: 1487977316662643706}
   portrait: {fileID: 1487977316248155075}

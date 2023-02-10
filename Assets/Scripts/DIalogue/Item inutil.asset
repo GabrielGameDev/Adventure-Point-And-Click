@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueName: Item inutil
   playerAnswer: Consigo matar ele com isso?
   dialogueText: "Isso \xE9 in\xFAtil"
-  portrait: {fileID: 21300000, guid: b23a0084fea403945a302e12cc707439, type: 3}
+  portrait: {fileID: 21300000, guid: 52009c024c2a4ee4fbf78082930c96e4, type: 3}
   isEnd: 0
   conditionalItem: {fileID: 11400000, guid: edcbaa02c6b31cc44ac419f499a3ce87, type: 2}
   answers:
