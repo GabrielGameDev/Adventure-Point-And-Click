@@ -79,6 +79,14 @@ public class UiManager : MonoBehaviour
 			{
 				Debug.Log("Tem item");
 				instance.interactionText.text = interactable.conditionalText;
+				if (interactable.useItem)
+				{
+					Inventory.UseItem(interactable.conditionalItem);
+					interactable.onUseItem.Invoke();
+					if (interactable.newItem != null)
+						Inventory.SetItem(interactable.newItem);
+				}
+					
 			}
 			else
 			{
@@ -208,6 +216,21 @@ public class UiManager : MonoBehaviour
 	{	
 
 		instance.infoText.gameObject.SetActive(false);
+	}
+
+	public static void RemoveInventoryImage(Item item)
+	{
+		if (instance == null)
+			return;
+
+		for (int i = 0; i < instance.inventoryImages.Length; i++)
+		{
+			if (instance.inventoryImages[i].sprite == item.itemImage)
+			{
+				instance.inventoryImages[i].gameObject.SetActive(false);
+				break;
+			}
+		}
 	}
 
 }

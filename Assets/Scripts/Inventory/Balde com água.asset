@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "Balde com \xE1gua"
   m_EditorClassIdentifier: 
   itemName: "Balde com \xE1gua"
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: a0a41a07ef0f96647868a1ea2e23675b, type: 3}
   description: "Encheu o balde de \xE1gua"

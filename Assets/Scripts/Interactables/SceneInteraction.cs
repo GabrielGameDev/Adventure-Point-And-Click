@@ -7,6 +7,7 @@ public class SceneInteraction : Interactable
 {
 
 	public string sceneName;
+	public string conditionalText;
 
 	public override void Interact()
 	{
@@ -18,7 +19,7 @@ public class SceneInteraction : Interactable
 			}
 			else
 			{
-				Debug.Log("Precisa do item " + conditionalItem.itemName);
+				UiManager.SetInfoText(conditionalText);
 			}
 			return;
 		}

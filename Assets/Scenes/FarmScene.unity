@@ -1067,7 +1067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8006290263280839104, guid: 0ee8e997a09329d4e9b75e9c326f0f03, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8006290263280839104, guid: 0ee8e997a09329d4e9b75e9c326f0f03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3423,7 +3423,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &195531976
 PrefabInstance:
@@ -10765,7 +10765,7 @@ Transform:
   m_Children:
   - {fileID: 312787682}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1001 &676109302
 PrefabInstance:
@@ -11414,7 +11414,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &713312605
 PrefabInstance:
@@ -12153,6 +12153,11 @@ MonoBehaviour:
   text: "A casa da fazendeira. N\xE3o tem ningu\xE9m. A porta est\xE1 trancada"
   conditionalText: 
   audioClip: {fileID: 0}
+  useItem: 0
+  newItem: {fileID: 0}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &733061150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12580,6 +12585,11 @@ MonoBehaviour:
   text: "Parece que n\xE3o tem ningu\xE9m ali dentro"
   conditionalText: 
   audioClip: {fileID: 0}
+  useItem: 0
+  newItem: {fileID: 0}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &761839451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16437,6 +16447,11 @@ MonoBehaviour:
     Vou pro inferno"
   conditionalText: 
   audioClip: {fileID: 0}
+  useItem: 0
+  newItem: {fileID: 0}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1067369574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16783,6 +16798,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4359369173050652, guid: f7155cb81768ed845bbaa6821ede4fe3, type: 3}
   m_PrefabInstance: {fileID: 1084737384}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1086292891
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.407503
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.805383
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.5854435
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471681583, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882448671471983631, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+      propertyPath: m_Name
+      value: Wooden_Bucket
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
 --- !u!1001 &1088476170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17559,7 +17631,7 @@ Transform:
   - {fileID: 1251212613}
   - {fileID: 1911675075}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1095434132
 PrefabInstance:
@@ -18586,7 +18658,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1163939910
 AudioSource:
@@ -20376,7 +20448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4962136846980274651, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4962136846980274651, guid: fb9f43e329077db4cb06658ce641ed12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22142,7 +22214,7 @@ Transform:
   - {fileID: 1007999262}
   - {fileID: 942074063}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1354770709
 BoxCollider:
@@ -22176,6 +22248,11 @@ MonoBehaviour:
   text: "J\xE1 t\xE1 na hora da colheita"
   conditionalText: 
   audioClip: {fileID: 0}
+  useItem: 0
+  newItem: {fileID: 0}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1354770711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22337,6 +22414,11 @@ MonoBehaviour:
   text: "Essa \xE1rvore parece diferente. N\xE3o. \xC9 igual a todas as outras"
   conditionalText: 
   audioClip: {fileID: 0}
+  useItem: 0
+  newItem: {fileID: 0}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1362048204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23199,6 +23281,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4476881461000374, guid: c4bc74b0a7f30164493f6b2b1cd5969e, type: 3}
   m_PrefabInstance: {fileID: 1421267115}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1422957338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5882448671471983631, guid: b8cd161c3c5c62a438ab3cad2334450e, type: 3}
+  m_PrefabInstance: {fileID: 1086292891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1422957339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422957338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f95ab982002b343b3e2712c95a361b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 4
+  isInteracting: 0
+  conditionalItem: {fileID: 0}
+  outline: {fileID: 0}
+  item: {fileID: 11400000, guid: 802f6c9bdf7e6a54faa88060501f6248, type: 2}
+--- !u!114 &1422957340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422957338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1426680704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27498,6 +27620,11 @@ MonoBehaviour:
   text: "Todo mundo usando gato, menos eu. N\xE3o posso usar muito o ar condicionado"
   conditionalText: 
   audioClip: {fileID: 0}
+  useItem: 0
+  newItem: {fileID: 0}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1643607284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29356,6 +29483,11 @@ MonoBehaviour:
     pra uma crian\xE7a morar aqui"
   conditionalText: 
   audioClip: {fileID: 0}
+  useItem: 0
+  newItem: {fileID: 0}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1745009984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30126,7 +30258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5554591684636559091, guid: 6a522d36bcc8bc0469d349acbee633a1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5554591684636559091, guid: 6a522d36bcc8bc0469d349acbee633a1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30168,10 +30300,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6754658727879947242, guid: 6a522d36bcc8bc0469d349acbee633a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8140153036069435026, guid: 6a522d36bcc8bc0469d349acbee633a1, type: 3}
       propertyPath: selection
       value: 
       objectReference: {fileID: 711715092}
+    - target: {fileID: 9181154176863215464, guid: 6a522d36bcc8bc0469d349acbee633a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a522d36bcc8bc0469d349acbee633a1, type: 3}
 --- !u!1001 &1792329385
@@ -31173,7 +31313,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1851991387
 PrefabInstance:
@@ -31646,7 +31786,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1868194527
 PrefabInstance:
@@ -34685,6 +34825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8e0760db14a534a89257f68a4f2a8c, type: 3}
+--- !u!1 &2005508748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3128118466431986944, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+  m_PrefabInstance: {fileID: 8301093065857925482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2006317237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36905,6 +37050,11 @@ MonoBehaviour:
   text: "Parece que tem \xE1gua l\xE1 embaixo"
   conditionalText: "Encheu o balde de \xE1gua"
   audioClip: {fileID: 0}
+  useItem: 1
+  newItem: {fileID: 11400000, guid: b49a176b9a6f9e846a9a5e2448fb49a4, type: 2}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2099171378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37547,9 +37697,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 679428226, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+      propertyPath: useItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 679428226, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+      propertyPath: onUseItem.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 679428226, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+      propertyPath: onUseItem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 679428226, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+      propertyPath: onUseItem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2005508748}
+    - target: {fileID: 679428226, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+      propertyPath: onUseItem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 679428226, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+      propertyPath: onUseItem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 679428226, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+      propertyPath: onUseItem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 679428226, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
+      propertyPath: onUseItem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3128118466431889696, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3128118466431889696, guid: 1707ed5d5e1e040419d19eeb237338c8, type: 3}
       propertyPath: m_LocalPosition.x

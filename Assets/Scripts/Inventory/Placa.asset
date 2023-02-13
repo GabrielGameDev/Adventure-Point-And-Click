@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Placa
   m_EditorClassIdentifier: 
   itemName: Placa
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: b32ce8bd1cec72942bbaeb1e76c81355, type: 3}
   description: Roubou a placa

@@ -32,6 +32,15 @@ public class Inventory : MonoBehaviour
 		UiManager.SetInventoryImage(item);
 	}
 
+	public static void UseItem(Item item)
+	{
+		if (instance == null)
+			return;
+
+		instance.items.Remove(item);
+		UiManager.RemoveInventoryImage(item);
+	}
+
 	public static bool HasItem(Item item)
 	{
 		if (instance == null)

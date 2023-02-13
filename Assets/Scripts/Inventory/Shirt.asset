@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shirt
   m_EditorClassIdentifier: 
   itemName: Shirt
-  itemImage: {fileID: 21300000, guid: 2f1eaeeaad36ee5469eff7ff158f37ba, type: 3}
+  itemImage: {fileID: 21300000, guid: b4252f3d35c33504ea0d82d40607e43d, type: 3}
   description: Peguei camisa

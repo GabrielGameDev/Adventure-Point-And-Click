@@ -511,6 +511,7 @@ MonoBehaviour:
   conditionalItem: {fileID: 11400000, guid: 451692779d9e357458196789bd48e0d9, type: 2}
   outline: {fileID: 0}
   sceneName: FarmScene
+  conditionalText: "N\xE3o vou l\xE1 fora sem camisa"
 --- !u!114 &252179922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,8 +720,8 @@ Camera:
   m_GameObject: {fileID: 631072074}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1300,6 +1301,11 @@ MonoBehaviour:
   text: "N\xE3o vou dormir de novo. Acabei de acordar"
   conditionalText: 
   audioClip: {fileID: 0}
+  useItem: 0
+  newItem: {fileID: 0}
+  onUseItem:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1958654687
 MonoBehaviour:
   m_ObjectHideFlags: 0
